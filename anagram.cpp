@@ -178,10 +178,9 @@ void additionoftwomatrix(int n, int k)
     {
         for (int j = 0; j < k; j++)
         {
-            cin>>king1[i][j];
+            cin >> king1[i][j];
         }
     }
-    cout<<"enter a second array: "<<endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < k; j++)
@@ -189,32 +188,32 @@ void additionoftwomatrix(int n, int k)
             cin >> king2[i][j];
         }
     }
-    cout<<"****first array*******"<<endl;
+    cout << "****first array*******" << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < k; j++)
         {
-            cout<<king1[i][j]<<" ";
+            cout << king1[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
-    cout<<"********second array*******"<<endl;
+    cout << "********second array*******" << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < k; j++)
         {
-            cout<<king2[i][j]<<" ";
+            cout << king2[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
-    cout<<"****result*****"<<endl;
+    cout << "****result*****" << endl;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < k; j++)
         {
-            cout<<king1[i][j]+king2[i][j]<<" ";
+            cout << king1[i][j] + king2[i][j] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
     //  for (int i = 0; i < n; i++)
     // {
@@ -224,7 +223,26 @@ void additionoftwomatrix(int n, int k)
     //     }
     //     cout<<endl;
     // }
-    
+}
+
+void repeating(string n)
+{
+    cout << "enter a string : " << endl;
+    cin >> n;
+    int k = 0;
+    for (int i = 0; i < n.length(); i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            if (n[i]==n[j])
+            {
+                k++;
+            }   
+            // cout<<n[i];
+        }
+    }
+    cout<<k<<" ";
+    cout<<endl;
 }
 
 int main()
@@ -232,16 +250,17 @@ int main()
     int a;
     cout << "Enter a test cases: " << endl;
     cin >> a;
-    int n, k;
+    // int n, k;
     while (a > 0)
     {
-        // string n, k;
+        string n, k;
         // int n, m;
         // anagram(n, m);
         // gcd(n, m);
         // sumofN(n, k);
         // palindromestring(n,k);
-        additionoftwomatrix(n,k);
+        // additionoftwomatrix(n,k);
+        repeating(n);
         a--;
     }
     // star(l);
