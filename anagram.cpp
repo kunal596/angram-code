@@ -245,12 +245,47 @@ void repeating(string n)
     cout<<endl;
 }
 
+void smalltocaps(int m,string n){
+    cout<<"enter a option: \n";
+    cout<<"1.caps to small: \n2.small to caps : \n"<<endl;
+    cin>>m;
+    switch (m)
+    {
+    case 1:
+        cout<<"enter a string: "<<endl;
+        cin>>n;
+        for (int i = 0; i < n.length(); i++)
+        {
+            if(n[i]>=65 && n[i]<=90){
+                cout<<char(n[i]+32);
+            }
+        }
+        cout<<endl;
+        break;
+    case 2:
+        cout<<"enter a string: "<<endl;
+        cin>>n;
+        for (int i = 0; i < n.length(); i++)
+        {
+            if(n[i]>=97 && n[i]<=122){
+                cout<<char(n[i]-32);
+            }
+        }
+        cout<<endl;
+        break;
+
+    default:
+        cout<<"invalid input: "<<endl;
+        break;
+    }
+}
+
 int main()
 {
     int a;
     cout << "Enter a test cases: " << endl;
     cin >> a;
-    // int n, k;
+    int m;
     while (a > 0)
     {
         string n, k;
@@ -260,8 +295,10 @@ int main()
         // sumofN(n, k);
         // palindromestring(n,k);
         // additionoftwomatrix(n,k);
-        repeating(n);
+        // repeating(n);
+        smalltocaps(m , n);
         a--;
+
     }
     // star(l);
     return 0;
