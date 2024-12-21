@@ -259,6 +259,9 @@ void smalltocaps(int m,string n){
             if(n[i]>=65 && n[i]<=90){
                 cout<<char(n[i]+32);
             }
+            else if(n[i]>=97 && n[i]<=122){
+                cout<<n[i];
+            }
         }
         cout<<endl;
         break;
@@ -270,6 +273,9 @@ void smalltocaps(int m,string n){
             if(n[i]>=97 && n[i]<=122){
                 cout<<char(n[i]-32);
             }
+            else if(n[i]>=65 && n[i]<=90){
+                cout<<n[i];
+            }
         }
         cout<<endl;
         break;
@@ -279,6 +285,8 @@ void smalltocaps(int m,string n){
         break;
     }
 }
+
+
 
 int main()
 {
