@@ -286,7 +286,29 @@ void smalltocaps(int m,string n){
     }
 }
 
-
+int dmgt(int n,int m){
+    cout<<"enter a dimensions of matrix\nenter the number of column"<<endl;
+    cin>>n;
+    cout<<"enter a number of rows"<<endl;
+    cin>>m;
+    int mat[n][m], k;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin>>mat[i][j];
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
 
 int main()
 {
